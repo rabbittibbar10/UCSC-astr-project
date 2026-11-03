@@ -1,0 +1,30 @@
+{
+    "permissions": {
+      "defaultMode": "default",
+      "blockReadsOutsideWorkingDirectories": true,
+      "blockWritesOutsideWorkingDirectories": true,
+      "disableBypassPermissionsMode": "disable",
+      "deny": ["WebFetch",
+       "WebSearch",
+       "Bash(git commit:*)",
+       "Bash(git push:*)",
+       "Bash(sudo:*)",
+       "Read(**/.env)",
+       "Read(**/.env.*)"
+      ]
+    },
+    "sandbox": {
+      "enabled": true,
+      "failIfUnavailable": true,
+      "allowUnsandboxedCommands": false,
+      "autoAllowBashIfSandboxed": false,
+      "filesystem": {
+        "denyRead": ["~/"],
+        "allowRead": ["/Users/Char/Documents/GitHub/UCSC-astr-project"]
+      }
+    },
+    "autoMemoryEnabled": false,
+    "enableArtifact": false,
+    "disableClaudeAiConnectors": true
+  }
+  
